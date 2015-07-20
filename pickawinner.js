@@ -45,13 +45,15 @@
 
                     data = JSON.parse(data);
 
-                    $('#AndTheWinnerIs').on('click', function(){
+                    $('#stopButton').removeAttr('disabled');
+
+                    $('#stopButton').on('click', function(){
 
                         // Something between 5 and 10 seconds.
                         var timeout = Math.floor(5000 + (Math.random() * 5000 + 1));
 
-                        while(timeout > 0) {
-
+                        while(timeout--) {
+                            $('#timerDisplay').text(timeout);
                         }
 
                     });
