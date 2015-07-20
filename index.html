@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Winner Picker</title>
+    <style>
+        html,body {
+            margin:0;
+            padding:0;
+            width: 100%;
+            height: 100%;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            background-color: black;
+        }
+
+        .centerMe {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateY(180deg);
+            color: green;
+            text-align: center;
+        }
+
+        #AndTheWinnerIs {
+            font-size: 2em;
+            line-height:2em;
+        }
+
+        #timerDisplay {
+            font-size: 2em;
+            top:0;
+            left:0;
+            margin: 15px;
+        }
+
+        button {
+            margin:15px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 1em;
+            padding: 15px;
+            background-color: black;
+            color: green;
+            border: 1px solid green;
+        }
+
+        button:hover {
+            background-color: green;
+            color: black;
+            border: 1px solid black;
+        }
+
+        button:disabled {
+            background-color: black;
+            color: black;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+<div>
+
+    <div class="centerMe" id="AndTheWinnerIs">Initialising...</div>
+
+    <button id="stopButton" disabled>Pick a winner</button>
+
+    <div id="timerDisplay"></div>
+
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="pickawinner.js"></script>
+</body>
+</html>
